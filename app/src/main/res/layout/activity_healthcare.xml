@@ -1,0 +1,383 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#CCC1C1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#990011">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HEALTHCARE"
+            android:textSize="24sp"
+            android:textColor="#CCC1C1"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/calendarCardView"
+            android:background="#CCC1C1"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FCF6F5"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calendar"
+                    android:textColor="#990011"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#990011"
+                    android:background="#CCC1C1"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:id="@+id/dashboard"
+            app:layout_constraintTop_toBottomOf="@id/calendarCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#990011">
+
+            <GridLayout
+                android:id="@+id/vieww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:columnCount="2"
+                android:rowCount="4">
+
+                <!-- Card 1: Distance Covered -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/c1"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FCF6F5"
+                        android:orientation="vertical">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:lottie_fileName="distance.json"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/distanceTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_vertical"
+                            android:layout_margin="10dp"
+                            android:text="Distance Covered:
+                            0 km"
+                            android:gravity="center_vertical"
+                            android:textColor="#990011"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 2: Steps Count -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/c2"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FCF6F5"
+                        android:orientation="vertical">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:lottie_fileName="water.json"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:id="@+id/steps"
+                            android:text="Steps Count:
+
+                                         0"
+                            android:layout_gravity="center|center_vertical"
+                            android:textColor="#990011"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 3: Calories Burned -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/c3"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FCF6F5"
+                        android:orientation="vertical">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:lottie_fileName="calorie.json"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:text="Calories Burned:              0 kcal"
+                            android:gravity="center_vertical"
+                            android:id="@+id/caloriesTextView"
+                            android:textColor="#990011"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 4: Water Intake -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/c4"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FCF6F5"
+                        android:orientation="vertical">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:lottie_fileName="steps.json"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Water Intake:
+
+
+                               0 ml"
+                            android:layout_gravity="center|center_vertical"
+                            android:id="@+id/waterTextView"
+                            android:textColor="#990011"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 5: Sleep Cycle -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/c5"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FCF6F5"
+                        android:orientation="vertical">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:lottie_fileName="sleep.json"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:text="Sleep Cycle:
+
+
+                             0 hours"
+                            android:id="@+id/sleepTextView"
+                            android:textColor="#990011"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 6: Heart Rate -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/c6"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="15dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FCF6F5"
+                        android:orientation="vertical">
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:lottie_fileName="heart.json"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_marginTop="3dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/HeartRate"
+                            android:text="Heart Rate:
+
+                             00 Hz"
+                            android:textColor="#990011"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Data"
+            android:backgroundTint="#CCC1C1"
+            app:layout_constraintTop_toBottomOf="@id/dashboard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#990011"
+            app:circularflow_radiusInDP="0dp"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+          android:id="@+id/nutrition"
+            android:text="NUTRITION GUIDANCE"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:textColor="#990011"
+            android:background="#CCC1C1"
+            app:layout_constraintTop_toBottomOf="@+id/updateButton"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/mental"
+            android:text="MENTAL HEALTH SUPPORT"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#990011"
+            android:background="#CCC1C1"
+            app:layout_constraintTop_toBottomOf="@+id/nutrition"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/injury"
+            android:text="INJURY PREVENTION"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#990011"
+            android:background="#CCC1C1"
+            app:layout_constraintTop_toBottomOf="@+id/mental"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

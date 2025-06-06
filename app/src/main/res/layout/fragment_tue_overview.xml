@@ -1,0 +1,181 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCF6F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/tue_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hockey" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tue_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Therapeutic Use Exemptions (TUEs) allow athletes to use prohibited substances when medically necessary."
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="#FCF6F5"
+            android:background="#990011"
+            app:autoSizeTextType="uniform" />
+
+        <!-- Check Prohibited List Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/check_prohibited_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#990011"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/check_prohibited_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Prohibited List"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#FCF6F5"
+                    android:background="#990011"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Text About Prohibited List -->
+        <TextView
+            android:id="@+id/prohibited_list_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="The List of Prohibited Substances and Methods (List) indicates what substances and methods are prohibited in sport and when.\n\nThe Prohibited List (PL) is published by WADA and comes into effect on 01 January every year. Many common medications that one may not associate with doping are on the PL such as insulin for diabetes treatment and some high blood pressure medications as well as prohibited methods such as intravenous (IV) use. If an athlete takes any medications, it is important to always check the List on the WADA website and/or search a trusted National Anti-Doping database. If an athlete needs the treatment for legitimate medical reasons, then they must apply for a TUE."
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="#990011"
+            app:autoSizeTextType="uniform" />
+
+        <!-- Know the TUE Process Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/know_tue_process_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#990011"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/know_tue_process_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Know the TUE Process"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#FCF6F5" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Q&A on TUE Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/qa_tue_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#990011">
+
+                <TextView
+                    android:id="@+id/qa_tue_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QandA on TUE"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="#FCF6F5" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- TUE Statistics Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tue_statistics_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#990011"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tue_statistics_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TUE Statistics"
+                    android:textColor="#FCF6F5"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Download TUE Application Form Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tue_application_form_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#990011"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tue_application_form_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FCF6F5"
+                    android:text="Download TUE Application Form"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+</ScrollView>

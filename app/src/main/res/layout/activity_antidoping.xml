@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".antidoping">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/imageview1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/adfront"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@color/black"
+            android:text="ANTI DOPING PROCESS"
+            android:textColor="#E2F1E7"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageview1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Atheletes havee their urine/or blod test anytime by their IF,NADO or a Major Event organizer.Specially trained doping conttrol officer carry out all test"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageview1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FCF6F5"
+            android:text="Stepwise process"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:id="@+id/c1"
+            android:layout_height="184dp"
+            android:layout_marginTop="25dp"
+            android:background="#FCF6F5"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step1: Athelete Selection"
+                android:textAllCaps="true"
+                android:textColor="#243642"
+                android:textSize="20sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="88dp"
+                android:layout_height="131dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintVertical_bias="1.0"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="olympic-athlete.json"
+                app:lottie_loop="true"
+                app:tint="@color/white"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:padding="4dp"
+                android:text="Athelete can be selected for the process at any time and any place.It is done on the basis of:-"
+                android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationView"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="61dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationView"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:srcCompat="@drawable/medal" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toStartOf="@+id/imageView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/random" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/imageView5"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/target" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MEDAL"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                tools:layout_editor_absoluteY="142dp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RANDOM"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TARGET"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/imageView17"
+                app:layout_constraintStart_toStartOf="@+id/imageView17"
+                app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:id="@+id/c2"
+             android:layout_height="184dp"
+            android:layout_marginTop="25dp"
+            android:background="#FCF6F5"
+            app:layout_constraintTop_toBottomOf="@+id/c1">
+
+            <TextView
+                android:id="@+id/textVieww6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step2: NOTIFICATION"
+                app:layout_constraintTop_toBottomOf="@+id/c1"
+                android:textAllCaps="true"
+                android:textColor="#243642"
+                android:textSize="20sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationVieww"
+                android:layout_width="91dp"
+                android:layout_height="126dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textVieww8"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="notification.json"
+                app:lottie_loop="true"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/textVieww8"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="4dp"
+                android:text="Atheletes are notified by Doping control officer about their selection in the process."
+                android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+               android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationVieww"
+                app:layout_constraintTop_toBottomOf="@+id/textVieww6" />
+
+            <TextView
+                android:id="@+id/textVieww9"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Atheletes have to sign to stick to their rights and responsibilities"
+                android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textVieww8"
+                app:layout_constraintTop_toBottomOf="@+id/textVieww8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:id="@+id/c3"
+            android:layout_height="184dp"
+            android:layout_marginTop="25dp"
+            android:background="#FCF6F5"
+            app:layout_constraintTop_toBottomOf="@+id/c2">
+
+            <TextView
+                android:id="@+id/textViewww6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step3: REPORTING TO DCO"
+                android:textAllCaps="true"
+                android:textColor="#243642"
+                android:textSize="20sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationViewww"
+                android:layout_width="95dp"
+                android:layout_height="137dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewww8"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="reporting.json"
+                app:lottie_loop="true"
+                app:tint="@color/white" />
+            <TextView
+                android:id="@+id/textViewww8"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+android:padding="4dp"
+                android:text="Atheletes have to report immediately for a test to the Doping Control Officer "
+                android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationViewww"
+                app:layout_constraintTop_toBottomOf="@+id/textViewww6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:id="@+id/c4"
+            android:layout_height="184dp"
+            android:layout_marginTop="25dp"
+            android:background="#FCF6F5"
+            app:layout_constraintTop_toBottomOf="@+id/c3">
+
+            <TextView
+                android:id="@+id/textVieeww6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step4: CHOOSING VESSEL"
+                app:layout_constraintTop_toBottomOf="@+id/c3"
+                android:textAllCaps="true"
+                android:textColor="#243642"
+                android:textSize="20sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationVieeww"
+                android:layout_width="95dp"
+                android:layout_height="137dp"
+                android:scaleType="centerCrop"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textVieeww8"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="selectvessel.json"
+                app:lottie_loop="true"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/textVieeww8"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+android:padding="4dp"
+                android:text="Athelets will choose a urine sample collection vessel from those available by DCO"   android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationVieeww"
+                app:layout_constraintTop_toBottomOf="@+id/textVieeww6" />
+
+            <TextView
+                android:id="@+id/textVieeww9"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+android:padding="4dp"
+                android:text="Also he will choose a blood sample kit from the choices" android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textVieeww8"
+                app:layout_constraintTop_toBottomOf="@+id/textVieeww8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:id="@+id/c5"
+            android:layout_height="184dp"
+            android:layout_marginTop="25dp"
+            android:background="#FCF6F5"
+            app:layout_constraintTop_toBottomOf="@+id/c4">
+
+            <TextView
+                android:id="@+id/textVieewww6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step5: PROVIDING SAMPLE"
+                android:textAllCaps="true"
+                android:textColor="#243642"
+                android:textSize="20sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationVieewww"
+                android:layout_width="95dp"
+                android:layout_height="137dp"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewww8"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="blood.json"
+                app:lottie_loop="true"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/textVieewww8"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+android:padding="4dp"
+                android:text="A blood collection officer will draw blood from the athelete.He will take 2 sample "
+                android:textColor="#243642"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationVieewww"
+                app:layout_constraintTop_toBottomOf="@+id/textVieewww6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="343dp"
+            android:id="@+id/c6"
+            android:layout_height="184dp"
+            android:layout_marginTop="25dp"
+            android:background="#FCF6F5"
+            app:layout_constraintTop_toBottomOf="@+id/c5">
+
+            <TextView
+                android:id="@+id/textVieeewww6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step6: URINE SAMPLE"
+                android:textAllCaps="true"
+                android:textColor="#243642"
+                android:textSize="20sp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationVieeewww"
+                android:layout_width="95dp"
+                android:layout_height="137dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textVieeewww8"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="urine.json"
+                app:lottie_loop="true"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/textVieeewww8"
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:text="minimum of 90ml of sample must be provided by the athelete
+.Failing so will require more sample again"
+                android:textColor="#243642"
+                android:padding="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/lottieAnimationVieeewww"
+                app:layout_constraintTop_toBottomOf="@+id/textVieeewww6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

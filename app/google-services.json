@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "558377707398",
+    "project_id": "innosphere12d",
+    "storage_bucket": "innosphere12d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558377707398:android:73eac8b50e4b2c56026e07",
+        "android_client_info": {
+          "package_name": "com.example.doping_defiance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmP7ZGfbsZ5lR0WWAK5pAkihFOsxEs_wA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

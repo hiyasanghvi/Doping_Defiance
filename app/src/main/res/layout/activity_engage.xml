@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Engage"
+    android:background="#FCF6F5">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:textColor="#FCF6F5"
+    android:background="#990011"
+    android:text="@string/Engage"
+    android:textSize="25sp"
+    android:gravity="center"
+    android:id="@+id/Engage"/>
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    app:cardBackgroundColor="#FCF6F5"
+    android:layout_marginTop="10dp"
+    android:id="@+id/card1"
+    app:layout_constraintTop_toBottomOf="@+id/Engage">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/engage"
+           android:id="@+id/engageimage"/>
+</androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tvengage"
+        android:layout_height="wrap_content"
+        android:text= "OUR PROGRAMMES"
+        android:textColor="#990011"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="26sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/card1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

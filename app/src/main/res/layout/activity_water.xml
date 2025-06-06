@@ -1,0 +1,98 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <!-- Frame for Image and Progress Overlay -->
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center">
+
+        <!-- Girl Image -->
+        <ImageView
+            android:id="@+id/girlImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/girl"
+            android:scaleType="fitXY" />
+
+        <!-- Water Progress Overlay -->
+        <View
+            android:id="@+id/waterOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ADD8E6"
+            android:alpha="0.7" />
+
+    </RelativeLayout>
+
+    <!-- Remaining Water Intake -->
+    <TextView
+        android:id="@+id/remainingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining: 22.7oz"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp" />
+
+    <!-- Current Water Intake -->
+    <TextView
+        android:id="@+id/intakeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intake: 41.3oz"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
+
+    <!-- Buttons for Adding Water -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button8oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8oz Water" />
+
+        <Button
+            android:id="@+id/button6oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6oz Tea"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/button14oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14oz Smoothie" />
+
+        <Button
+            android:id="@+id/button16oz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16.9oz Water"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

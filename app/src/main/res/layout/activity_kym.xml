@@ -1,0 +1,138 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <!-- Improved Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#990011"
+        android:gravity="center_vertical">
+
+        <!-- Logo/Icon -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo"
+
+            android:layout_marginEnd="8dp" />
+
+        <!-- Header Text -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Know Your Medicine"
+            android:textColor="#FCF6F5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical" />
+
+        <!-- Language Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:layout_marginStart="8dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Dropdown for User Type -->
+    <TextView
+     android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select User Type"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/userTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FCF6F5" />
+
+    <!-- Dropdown for Sport -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Sport"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/sportSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FCF6F5" />
+
+    <!-- Search for Medicine -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Medicine"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/medicineSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:hint="Enter medicine or generic name"
+            android:background="#FCF6F5"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Button to Select Image -->
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:backgroundTint="#990011"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="18dp" />
+
+    <!-- Section to Display Results -->
+    <TextView
+        android:id="@+id/resultsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Results"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/resultListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:visibility="gone" />
+
+</LinearLayout>

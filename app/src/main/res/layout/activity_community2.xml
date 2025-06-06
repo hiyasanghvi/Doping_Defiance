@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:id="@+id/main"
+    android:background="@color/white">
+
+    <!-- Chat container -->
+    <LinearLayout
+        android:id="@+id/chatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <!-- Header with "Leave Room" Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#990011"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/chatHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DopingDefiance"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/leaveRoomButton"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:backgroundTint="#FCF6F5"
+                android:padding="10dp"
+                android:textSize="10sp"
+                android:text="Leave Room"
+                android:textColor="#990011" />
+        </LinearLayout>
+
+        <!-- Main chat layout (grid-style for larger screens) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <!-- Sidebar (Users and Room Name) -->
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/black"
+                android:padding="15dp"
+                android:layout_width="1dp">
+
+                <TextView
+                    android:id="@+id/roomName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Name:"
+                    android:textColor="#fff"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/roomNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room 1"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:text="Users"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="40dp"
+                    android:layout_width="2dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/usersList"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <!-- Chat messages area -->
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/chatMessages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chat messages will appear here"
+                        android:textColor="#333"
+                        android:textSize="14sp"
+                        android:padding="10dp"
+                        android:background="#FCF6F5"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- Message input form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter Message"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:background="@drawable/edit_text_background"/>
+
+            <Button
+                android:id="@+id/sendMessageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:textColor="#333"
+                android:backgroundTint="#990011"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
